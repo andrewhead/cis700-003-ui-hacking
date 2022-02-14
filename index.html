@@ -1,0 +1,60 @@
+<html>
+
+<head>
+  <style>
+    /* Style rules are comprised of... */
+    /* First, a 'selector', which declares what kinds of content should be styled... */
+    p {
+      /* Second, a list of properties, specifying formatting that should be applied to the content. Here, this rule should be read as: 'find all paragraphs, and make their font family "Arial".' */
+      font-family: "Arial";
+      background-color: brown;
+    }
+    p.fancy {
+      font-family: "Times New Roman";
+    }
+
+    #code-editor-container {
+      position: absolute;
+      top: 300px;
+      left: 20px;
+      width: 200px;
+    }
+
+    .code-editor-handle {
+      height: 20px;
+      background-color: green;
+    }
+  </style>
+
+  <!--Add scripts and style files here.-->
+  <!--Scripts are run in sequential order.-->
+  <script src="lib/codemirror.js"></script>
+  <link rel="stylesheet" href="lib/codemirror.css">
+  <script src="mode/javascript/javascript.js"></script>
+
+  <!--This script tag says: look for a 'main.js' file in the local directory. Run that script when the browser renders the 'head' element (i.e., before the 'body' of the page is rendered.)-->
+  <script src="/main.js"></script>
+
+</head>
+
+<body>
+  <p>
+    Welcome to the first test web page for the CIS 700-003 user interface hacking lectures!
+  </p>
+  <p class="fancy">This is another paragraph of text.</p>
+  <p>And another paragraph!!!</p>
+  <p class="fancy">Note that multiple sentences in the same paragraph just appear one after the other. And the spaces that appear at
+    the start and end of a paragraph element don't really matter. Also, kind of like in LaTeX, if you have a lot of    
+    space between consecutive
+    tokens, it doesn't really matter. It just gets interpreted as a single space.</p>
+
+  <input type="text"></input>
+  <input id="button-with-press-message" type="button" value="Press me"></input>
+
+  <div id="code-editor-container" draggable="true">
+    <div class="code-editor-handle"></div>
+    <textarea id="code-editor-textarea"></textarea>
+  </div>
+</body>
+
+</html>
